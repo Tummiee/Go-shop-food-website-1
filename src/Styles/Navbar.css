@@ -46,10 +46,15 @@
 
 .navbar .rightSide button {
   display: none;
+  color: white;
+  border: none;
+  outline: none;
+  background: none;
+  
 }
 
 .navbar .rightSide svg {
-    font-size: 40px;
+  font-size: 3rem;
   }
   
   .navbar #open {

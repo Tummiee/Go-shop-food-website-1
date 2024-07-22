@@ -1,7 +1,7 @@
 import  {useState} from 'react';
 import Logo from '../assets/logo.png'
 import {Link} from 'react-router-dom';
-import ReorderIcon from '@mui/icons-material/Reorder';
+import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import '../Styles/Navbar.css'
 import ExpandingSearchButton from './ExpandingSearchButton';
 
@@ -31,7 +31,7 @@ const toggleNavbar = () => {
             <Link to="/about"> About </Link>
             <Link to="/contact"> Contact </Link>
             <button onClick={toggleNavbar}>
-              <ReorderIcon />
+              <MenuOpenIcon />
             </button>
           </div>
 
