@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgba(224, 180, 35, 0.836);
+    background-color: hsla(46, 75%, 51%, 0.835);
 }
 
 .menu .menuTitle {
