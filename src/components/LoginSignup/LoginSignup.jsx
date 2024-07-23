@@ -11,12 +11,16 @@ function LoginSignup() {
 
     const [action, setAction] = useState("Login");
 
-  return (
-    <div className='container'>
-        <img src={Logo} style={{width: "100px",
+  return (<div className='body'>
+     <img src={Logo} style={{width: "100px",
+                                position: "relative",
                                 borderBottomRightRadius: "10%",
-                                borderBottomLeftRadius: "10%"
+                                borderBottomLeftRadius: "10%",
+                                margin: "0",
+                                top: "3%"
         }}/>
+    <div className='container'>
+       
         <div className='header'>
             <div className="text">{action}</div>
             <div className="underline"></div>
@@ -44,7 +48,7 @@ function LoginSignup() {
             <div className={action==="Sign Up" ? "submit gray" : "submit"} onClick={() => {setAction("Login")}}>Login</div>
         </div>
     </div>
-  )
+  </div>)
 }
 
 export default LoginSignup

@@ -1,8 +1,12 @@
-body{
-    height: 100vh;
-    width: 100%;
+.body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     grid-template-columns: 1fr;
     background: linear-gradient(#e0b423d5, #915116);
+    height: 100vh;
+    padding-top: 5%;
 }
 
 .container{
@@ -10,11 +14,11 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 600px;
+    width: 50vw;
+    height: 70vh;
+    padding-bottom: 5%;
     margin: auto;
-    margin-top: 200px;
     background-color: #fff;
-    padding-bottom: 30px;
     box-shadow: 5px 5px 10px rgba(73, 73, 73, 0.205);
     border-radius: 3%;
 }
@@ -22,13 +26,14 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 9px;
+    gap: 5px;
     width: 100%;
-    margin-top: 30px;
 }
 
 .text{
-    font-size: 3rem;
+    position: relative;
+    top: 20%;
+    font-size: 2.5rem;
     font-weight: 700;
 }
 
@@ -40,7 +45,6 @@ body{
 }
 
 .inputs{
-    margin-top: 55px;
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -50,8 +54,8 @@ body{
     display: flex;
     align-items: center;
     margin: auto;
-    width: 480px;
-    height: 80px;
+    width: 40vw;
+    height: 12vh;
     background: #eaeaea;
     border-radius: 6px;
 }
@@ -61,17 +65,17 @@ body{
 }
 
 .input input{
-    height: 50px;
-    width: 400px;
+    height: 30px;
+    width: 25vw;
     background: transparent;
     border: none;
     outline: none;
     color: #797979;
-    font-size: 1.188rem;
+    font-size: 1rem;
 }
 
 .forgot-password{
-    margin-top: 27px;
+    margin-top: 5%;
     color: #797979;
     font-size: 1.125rem;
 }
@@ -84,24 +88,56 @@ body{
 .submit-container{
     display: flex;
     gap: 30px;
-    margin: 60px auto;
+    margin: 0 auto;
 }
 
 .submit{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 220px;
-    height: 59px;
+    width: 15vw;
+    height: 50px;
     color: #fff;
     background: black;
     border-radius: 50px;
-    font-size: 1.188rem;
+    font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
+    margin-top: 3%;
 }
 
 .gray{
     background: #eaeaea;
     color: grey;
+}
+
+@media only screen and (max-width: 640px){
+   .container{
+    width: 70vw;
+   }
+   .text{
+    font-size: 2rem;
+   }
+   .inputs{
+    gap: 20px;
+   }
+   .input{
+    height: 10vh;
+    width: 55vw;
+   }
+   .input svg{
+    font-size: 1.4rem;
+   }
+   .input input{
+    font-size: 1rem;
+   }
+   .forgot-password{
+    font-size: .9rem;
+    margin-top: 10%;
+   }
+   .submit{
+    width: 22vw;
+    height: 40px;
+    font-size: .9rem;
+   }
 }
