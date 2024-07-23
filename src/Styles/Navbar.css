@@ -6,6 +6,8 @@
     background-color: black;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     color: white;
     z-index: 100;
 }
@@ -119,6 +121,9 @@
       display: none;
     }
     
+    .navbar .logout {
+      display: none;
+    }
   }
   
   @media only screen and (min-width: 768px) {
@@ -129,5 +134,6 @@
     .hiddenLinks {
       display: none;
     }
+    
   }
   

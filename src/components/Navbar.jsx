@@ -4,6 +4,8 @@ import {Link} from 'react-router-dom';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import '../Styles/Navbar.css'
 import ExpandingSearchButton from './ExpandingSearchButton';
+import { useNavigate } from 'react-router-dom';
+
 
 function Navbar() {
 
@@ -12,6 +14,14 @@ const [openLinks, setOpenLinks] = useState(false)
 const toggleNavbar = () => {
       setOpenLinks(!openLinks)
 }
+
+const navigate = useNavigate();
+
+const handleLogout = () => {
+  //logic to logout
+  navigate('/loginSignup')
+}
+
   return (
     <div>
       <div className="navbar">
@@ -22,6 +32,7 @@ const toggleNavbar = () => {
                 <Link to="/menu"> Menu </Link>
                 <Link to="/about"> About </Link>
                 <Link to="/contact"> Contact </Link>
+                <button onClick={handleLogout} style={{ marginLeft: 'auto' }}>Logout</button>
               </div>
           </div>  
 
@@ -36,6 +47,13 @@ const toggleNavbar = () => {
           </div>
 
           <ExpandingSearchButton />
+          <button className='logout' onClick={handleLogout} style={{ marginLeft: 'auto', 
+                                                  height: '50%',
+                                                  border: '0',
+                                                  outline: '0',
+                                                  color: 'white',
+                                                  background: 'none',
+                                                  padding: '20px' }}>Logout</button>
           
       </div>
       

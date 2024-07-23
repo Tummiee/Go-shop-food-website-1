@@ -5,6 +5,7 @@
    width: 14vw;
    overflow: visible;
    flex: 25%;
+   right: 10%;
    
 }
 
@@ -23,7 +24,6 @@
     align-items: center;
     color: white;
     cursor: pointer;
-    top: 30%;
     
   }
 
@@ -44,10 +44,10 @@
     border: 0;
     outline: 0;
     height: 40px;
-    top: 25%;
     width: 20vw;
     padding: 0 20px 0 20px;
     right: 0;
+    top: -40%;
   }
 
   .input-container.visible {
@@ -62,9 +62,21 @@
     margin: 3px;
   }
 
+  @media only screen and (max-width: 1280px){
+    .search{
+      right: 3%;
+    }
+  }
+
+  @media only screen and (max-width: 1024px){
+    .search{
+      right: -2%;
+    }
+  }
  
   @media only screen and (max-width: 768px) {
     .search{
       display: none;
+      right: 5%;
     }
   }
