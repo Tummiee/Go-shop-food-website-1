@@ -17,7 +17,8 @@
     flex: 25%;
     display: flex;
     align-items: center;
-    padding-left: 3%;
+    padding-left: 2%;
+    
 }
 .navbar .leftSide img{
     width: 90px;
@@ -47,12 +48,13 @@
 }
 
 .navbar .rightSide button {
+  position: relative;
   display: none;
   color: white;
   border: none;
   outline: none;
   background: none;
-  
+  left: 20%;
 }
 
 .navbar .rightSide svg {
@@ -72,6 +74,9 @@
 
   .hiddenLinks {
     display: none;
+    position: relative;
+    width: 80%;
+    left: 10%;
   }
   
   
@@ -123,6 +128,11 @@
     
     .navbar .logout {
       display: none;
+    }
+
+    .navbar .leftSide img{
+      position: relative;
+      right: 35%;
     }
   }
   
