@@ -13,11 +13,9 @@ function LoginSignup() {
 
   return (<div className='body'>
      <img src={Logo} style={{width: "100px",
-                                position: "relative",
-                                borderBottomRightRadius: "10%",
+                                borderTopRightRadius: "10%",
                                 borderBottomLeftRadius: "10%",
                                 margin: "0",
-                                top: "3%"
         }}/>
     <div className='container'>
        

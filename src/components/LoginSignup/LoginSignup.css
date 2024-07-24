@@ -6,7 +6,7 @@
     grid-template-columns: 1fr;
     background: linear-gradient(#e0b423d5, #915116);
     height: 100vh;
-    padding-top: 5%;
+    margin-top: 0;
 }
 
 .container{
@@ -17,7 +17,6 @@
     width: 50vw;
     height: 70vh;
     padding-bottom: 5%;
-    margin: auto;
     background-color: #fff;
     box-shadow: 5px 5px 10px rgba(73, 73, 73, 0.205);
     border-radius: 3%;
@@ -61,12 +60,12 @@
 }
 
 .input svg{
-    margin: 0px 30px;
+    margin: 0px 20px;
 }
 
 .input input{
     height: 30px;
-    width: 25vw;
+    width: 27vw;
     background: transparent;
     border: none;
     outline: none;
