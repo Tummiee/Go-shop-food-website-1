@@ -10,7 +10,7 @@
   
   .aboutTop {
     width: 100%;
-    height: 45%;
+    height: 50%;
     background-repeat: no-repeat;
     background-size: cover;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -19,7 +19,7 @@
   .aboutBottom {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 100vh;
     width: 90%;
     justify-content: center;
     align-items: center;

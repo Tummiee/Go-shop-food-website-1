@@ -14,11 +14,10 @@
 
 .navbar .leftSide{
     height: 100%;
-    flex: 25%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding-left: 2%;
-    
+    transition: all 0.5s ease;
 }
 .navbar .leftSide img{
     width: 90px;
@@ -48,13 +47,13 @@
 }
 
 .navbar .rightSide button {
-  position: relative;
+  position: fixed;
   display: none;
   color: white;
   border: none;
   outline: none;
   background: none;
-  left: 20%;
+  left: 85%;
 }
 
 .navbar .rightSide svg {
@@ -63,6 +62,7 @@
   
   .navbar #open {
     padding-left: 0px;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
   }
   .navbar #open img {
     display: none;
@@ -75,8 +75,9 @@
   .hiddenLinks {
     display: none;
     position: relative;
-    width: 80%;
-    left: 10%;
+    width: 60%;
+    left: 7%;
+
   }
   
   
@@ -84,6 +85,7 @@
   .navbar #open a {
     width: 70px;
     margin: 5px;
+    font-size: 0.9rem;
   }
 
   

@@ -32,11 +32,12 @@ const handleLogout = () => {
                 <Link to="/menu"> Menu </Link>
                 <Link to="/about"> About </Link>
                 <Link to="/contact"> Contact </Link>
-                <button onClick={handleLogout} style={{ marginLeft: 'auto',
+                <button onClick={handleLogout} style={{ marginLeft: '10%',
                                                         border: '0',
                                                         outline: '0',
                                                         color: 'red',
                                                         background: 'none',
+                                                        
                 }}>Logout</button>
               </div>
           </div>  
@@ -56,7 +57,7 @@ const handleLogout = () => {
                                                   height: '50%',
                                                   border: '0',
                                                   outline: '0',
-                                                  color: 'white',
+                                                  color: 'red',
                                                   background: 'none',
                                                   padding: '20px' }}>Logout</button>
           
