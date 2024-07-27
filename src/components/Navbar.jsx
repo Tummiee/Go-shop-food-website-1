@@ -7,7 +7,7 @@ import ExpandingSearchButton from './ExpandingSearchButton';
 import { useNavigate } from 'react-router-dom';
 
 
-function Navbar() {
+function Navbar () {
 
 const [openLinks, setOpenLinks] = useState(false)
 
@@ -19,7 +19,7 @@ const navigate = useNavigate();
 
 const handleLogout = () => {
   //logic to logout
-  navigate('/loginSignup')
+  navigate('/login')
 }
 
   return (

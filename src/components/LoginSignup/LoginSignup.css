@@ -14,18 +14,23 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 45vw;
-    height: 70vh;
+    width: 45vw;  
     padding-bottom: 5%;
     background-color: #fff;
     box-shadow: 5px 5px 10px rgba(73, 73, 73, 0.205);
     border-radius: 3%;
 }
+#signup{
+    height: 85vh;
+}
+#login{
+    height: 70vh;
+}
 .header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
+   padding-top: 10%;
     width: 100%;
 }
 
@@ -74,13 +79,13 @@
     right: 3%;
 }
 
-.forgot-password{
-    margin-top: 5%;
+.AuthPageSwitch{
     color: #797979;
     font-size: 1.125rem;
+    margin-top: 5%;
 }
 
-.forgot-password span{
+.AuthPageSwitch span{
     cursor: pointer;
     color: black;
     padding-left: 10px;
@@ -95,20 +100,48 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 15vw;
+    width: 40vw;
     height: 50px;
     color: #fff;
     background: black;
-    border-radius: 50px;
+    border-radius: 10px;
     font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
     margin-top: 3%;
+    border: none;
 }
 
 .gray{
     background: #eaeaea;
     color: grey;
+}
+
+@media only screen and (max-width: 1024px){
+    .input{
+        height: 8vh;
+        width: 55vw;
+       }
+
+       .container{
+        width: 70vw;
+       }
+
+       #signup{
+        height: 75vh;
+    }
+
+       #login{
+        height: 60vh;
+    }
+
+       .submit-container{
+        gap: 20px;
+       }
+       .submit{
+        width: 55vw;
+        height: 45px;
+       }
 }
 
 @media only screen and (max-width: 640px){
@@ -118,8 +151,15 @@
    }
     .container{
     width: 90vw;
-    height: 60vh;
    }
+
+   #signup{
+    height: 75vh;
+}
+
+   #login{
+    height: 60vh;
+}
    .text{
     font-size: 2rem;
    }
@@ -136,16 +176,26 @@
    .input input{
     font-size: 1rem;
    }
-   .forgot-password{
+   .create-new-account{
     font-size: .9rem;
-    margin-top: 10%;
+    
    }
    .submit-container{
     gap: 15px;
    }
    .submit{
-    width: 32vw;
+    width: 75vw;
     height: 40px;
     font-size: .9rem;
    }
+}
+
+@media only screen and (max-width: 400px){
+    #signup{
+        height: 80vh;
+    }
+
+    #login{
+        height: 70vh;
+    }
 }
