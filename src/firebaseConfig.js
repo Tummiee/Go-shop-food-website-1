@@ -3,12 +3,12 @@ import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDwSeIE3X0J9E0hZfdd22J3stSaJjdPEgE",
-  authDomain: "go-shop-food-website-1.firebaseapp.com",
-  projectId: "go-shop-food-website-1",
-  storageBucket: "go-shop-food-website-1.appspot.com",
-  messagingSenderId: "569713365267",
-  appId: "1:569713365267:web:7d120d92f5cd92134c8ae6"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
 const app = initializeApp(firebaseConfig);
