@@ -9,6 +9,7 @@ import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
 import Login from './components/LoginSignup/Login';
 import Signup from './components/LoginSignup/Signup';
+import ProtectedRoutes from './utils/ProtectedRoutes';
 
 function App() {
 
@@ -26,10 +27,12 @@ function App() {
                   <Navbar />
                   <Routes>
                   
-                    <Route path="/" exact Component={Home} />
-                    <Route path="/menu" exact Component={Menu} />
-                    <Route path="/about" exact Component={About} />
-                    <Route path="/contact" exact Component={Contact} />
+                    <Route element={<ProtectedRoutes/>}>
+                      <Route path="/" exact Component={Home} />
+                      <Route path="/menu" exact Component={Menu} />
+                      <Route path="/about" exact Component={About} />
+                      <Route path="/contact" exact Component={Contact} />
+                    </Route>
                   
                   </Routes>
                   <Footer />

@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import EmailIcon from '@mui/icons-material/Email';
 import LockIcon from '@mui/icons-material/Lock';
 import { useAuth } from '../../contexts/AuthContext';
-
+import Notification from '../Notification';
 
 
 
@@ -20,7 +20,9 @@ const handleSignupPage = () => {
   navigate('/signup')
 }
 
-const { login, currentUser } = useAuth();
+const [showNotification, setShowNotification] = useState(false);
+
+const { login } = useAuth();
 const [email, setEmail] = useState('');
 const [password, setPassword] = useState('');
 const [error, setError] = useState('');
@@ -31,6 +33,10 @@ const handleLogin = async (e) => {
 
   try {
     await login(email, password);
+    setShowNotification(true);
+            setTimeout(() => {
+                navigate('/');
+            }, 2000); // Navigate after 5 seconds
   } catch (err) {
     setError(err.message);
   }
@@ -74,7 +80,13 @@ const handleLogin = async (e) => {
                 <button className="submit" type='submit'>Log In</button>
             </div>
         </form>
-
+        {showNotification && (
+                <Notification
+                    message="Login successful!"
+                    duration={2} // 5 seconds countdown
+                    onClose={() => setShowNotification(false)}
+                />
+            )}
         <div className="AuthPageSwitch">Create new Account 
         <span onClick={handleSignupPage}>Click here</span></div>
     </div>

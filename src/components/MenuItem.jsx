@@ -1,5 +1,6 @@
 
 
+// eslint-disable-next-line react/prop-types
 function MenuItem({image, name, price, tag}) {
   return (
     <div className="menuItem">

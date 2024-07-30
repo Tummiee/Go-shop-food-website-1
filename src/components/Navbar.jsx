@@ -5,6 +5,7 @@ import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import '../Styles/Navbar.css'
 import ExpandingSearchButton from './ExpandingSearchButton';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext';
 
 
 function Navbar () {
@@ -16,10 +17,15 @@ const toggleNavbar = () => {
 }
 
 const navigate = useNavigate();
+const { logout } = useAuth();
 
-const handleLogout = () => {
-  //logic to logout
-  navigate('/login')
+const handleLogout = async () => {
+  try {
+    await logout();
+    navigate('/login');
+} catch (error) {
+    console.error("Error logging out:", error);
+}
 }
 
   return (
@@ -59,7 +65,8 @@ const handleLogout = () => {
                                                   outline: '0',
                                                   color: 'red',
                                                   background: 'none',
-                                                  padding: '20px' }}>Logout</button>
+                                                  padding: '20px' }}>Logout
+          </button>
           
       </div>
       
