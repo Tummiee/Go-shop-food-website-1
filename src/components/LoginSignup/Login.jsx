@@ -36,7 +36,7 @@ const handleLogin = async (e) => {
     setShowNotification(true);
             setTimeout(() => {
                 navigate('/');
-            }, 2000); // Navigate after 5 seconds
+            }, 2000); // Navigate after 2 seconds
   } catch (err) {
     setError(err.message);
   }

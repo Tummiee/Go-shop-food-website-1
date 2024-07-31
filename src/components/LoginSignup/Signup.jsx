@@ -6,10 +6,15 @@ import { useNavigate } from 'react-router-dom';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import EmailIcon from '@mui/icons-material/Email';
 import LockIcon from '@mui/icons-material/Lock';
+import Notification from '../Notification';
+
+
 
 
 
 function LoginSignup() {
+
+const [showNotification, setShowNotification] = useState(false);
 
 const navigate = useNavigate();
     
@@ -30,6 +35,10 @@ const handleLoginPage = () => {
 
     try {
       await signup(email, password);
+      setShowNotification(true);
+            setTimeout(() => {
+                navigate('/');
+            }, 2000); // Navigate after 2 seconds
     } catch (err) {
       setError(err.message);
     }
@@ -50,7 +59,7 @@ const handleLoginPage = () => {
         <form onSubmit={handleSignup} className="inputs" >
             <div className="input">
                 <AccountCircleIcon />
-                <input type="text" placeholder='Name'/>
+                <input type="text" placeholder='Full Name'/>
             </div>
             
             <div className="input">
@@ -74,6 +83,15 @@ const handleLoginPage = () => {
                 <button className= "submit" type='submit'>Sign Up</button>
             </div>
         </form>
+
+        {showNotification && (
+                <Notification
+                    message="Account created successfully!"
+                    duration={2} // 2 seconds countdown
+                    onClose={() => setShowNotification(false)}
+                />
+        )}
+
         <div className="AuthPageSwitch">Have an account? 
             <span onClick={handleLoginPage}> Click here</span></div>
 
