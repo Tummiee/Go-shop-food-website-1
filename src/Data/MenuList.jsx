@@ -66,7 +66,7 @@ export const MenuList = [
     },
     {
         id: 6,
-        name: "Grilled Chicken Breast",
+        name: "Grilled Chicken",
         price: 7.99,
         cookTime: "25m",
         favorite: true,

@@ -6,6 +6,7 @@ import '../Styles/Navbar.css'
 import ExpandingSearchButton from './ExpandingSearchButton';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
+import Cart from './Cart';
 
 
 function Navbar () {
@@ -29,7 +30,7 @@ const handleLogout = async () => {
 }
 
   return (
-    <div>
+    <div className='cont'>
       <div className="navbar">
           <div className="leftSide" id={openLinks ? "open" : "close"}>
               <img src={Logo} style={{width: "100px"}}/>   
@@ -70,6 +71,7 @@ const handleLogout = async () => {
           
       </div>
       
+      <Cart />
     </div>
   )
 }
