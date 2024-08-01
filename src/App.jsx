@@ -10,11 +10,12 @@ import { AuthProvider } from './contexts/AuthContext';
 import Login from './components/LoginSignup/Login';
 import Signup from './components/LoginSignup/Signup';
 import ProtectedRoutes from './utils/ProtectedRoutes';
+import { CartProvider } from './contexts/CartContext';
 
 function App() {
 
   return (
-    <><AuthProvider>
+    <CartProvider><AuthProvider>
       <Router>
         
           <Routes>
@@ -43,7 +44,7 @@ function App() {
         
       </Router>
       </AuthProvider>
-    </>
+    </CartProvider>
   );
 }
 

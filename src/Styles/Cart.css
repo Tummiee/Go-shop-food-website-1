@@ -13,6 +13,7 @@
     border-bottom-left-radius: 10%;
     z-index: 100;
     font-size: 1rem;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 768px) {

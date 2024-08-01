@@ -1,7 +1,11 @@
 import AddIcon from '@mui/icons-material/Add';
+import { useCart } from '../contexts/CartContext';
 
 // eslint-disable-next-line react/prop-types
 function MenuItem({image, name, price, tag}) {
+
+  const { addToCart } = useCart();
+
   return (
     <div className="menuItem">
         <div style={{backgroundImage: `url(${image})`}}></div>
@@ -11,7 +15,7 @@ function MenuItem({image, name, price, tag}) {
             <p>{price}$</p>
             <p>{tag}</p>
           </div>
-          <AddIcon style={{color: '#4f4f4e',
+          <AddIcon onClick={() => addToCart()} style={{color: '#4f4f4e',
                            position: 'relative',
                            bottom: '32%'
           }}/>

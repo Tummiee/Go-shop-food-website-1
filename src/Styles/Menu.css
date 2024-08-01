@@ -14,7 +14,7 @@
 }
 
 .menuList {
-    width: 100vw;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     place-items: center;
@@ -50,6 +50,12 @@
   .menuItem h1,
   .menuItem p {
     margin-left: 20px;
+  }
+  .menuItem h1{
+    font-size: 2rem;
+  }
+  .menuItem p{
+    font-size: 1rem;
   }
   .menuItem .priceNTag{
     padding-top:8% ;

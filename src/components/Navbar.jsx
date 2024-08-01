@@ -39,7 +39,9 @@ const handleLogout = async () => {
                 <Link to="/menu"> Menu </Link>
                 <Link to="/about"> About </Link>
                 <Link to="/contact"> Contact </Link>
-                <button onClick={handleLogout} style={{ marginLeft: '10%',
+                <button onClick={handleLogout} style={{ 
+                                                        
+                                                        marginLeft: '30%',
                                                         border: '0',
                                                         outline: '0',
                                                         color: 'red',
@@ -60,7 +62,8 @@ const handleLogout = async () => {
           </div>
 
           <ExpandingSearchButton />
-          <button className='logout' onClick={handleLogout} style={{ marginLeft: 'auto', 
+          <button className='logout' onClick={handleLogout} style={{ 
+                                                  marginLeft: 'auto', 
                                                   height: '50%',
                                                   border: '0',
                                                   outline: '0',
