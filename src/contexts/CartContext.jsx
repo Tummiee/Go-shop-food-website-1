@@ -1,5 +1,6 @@
 import { createContext, useContext, useState } from 'react';
 
+
 const CartContext = createContext();
 
 // eslint-disable-next-line react-refresh/only-export-components
@@ -13,6 +14,7 @@ export const CartProvider = ({ children }) => {
     const [totalItems, setTotalItems] = useState(0);
 
     const addToCart = (item) => {
+
         setCart([...cart, item]);
         setTotalItems(totalItems + 1); // Increment total items count
     };

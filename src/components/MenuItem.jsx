@@ -6,6 +6,13 @@ function MenuItem({image, name, price, tag}) {
 
   const { addToCart } = useCart();
 
+  const item = {
+    name,
+    price,
+    tag,
+    image
+  };
+
   return (
     <div className="menuItem">
         <div style={{backgroundImage: `url(${image})`}}></div>
@@ -15,7 +22,7 @@ function MenuItem({image, name, price, tag}) {
             <p>{price}$</p>
             <p>{tag}</p>
           </div>
-          <AddIcon onClick={() => addToCart()} style={{color: '#4f4f4e',
+          <AddIcon onClick={() => addToCart(item)} style={{color: '#4f4f4e',
                            position: 'relative',
                            bottom: '32%'
           }}/>
