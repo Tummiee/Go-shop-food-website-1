@@ -41,8 +41,8 @@ function Cart() {
                     item && item.name && item.price && item.image ? (
                         <div className='cartProduct' key={index}>
                             <div className='cartProduct-sub'>
-                              <img src={item.image} style={{width: '50px',
-                                                            height: '50px'
+                              <img src={item.image} style={{width: 'clamp(30px, 5vw, 100px)',
+                                                            height: 'clamp(30px, 5vw, 100px)'
                               }}/><div className='item-name'>{item.name}</div> <div className='item-price'>- ${item.price}</div>
                               <button onClick={() => removeFromCart(item.id)}>Remove</button>
                             </div>
