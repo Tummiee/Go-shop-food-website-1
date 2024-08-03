@@ -68,7 +68,7 @@ hr{
     background-color: rgba(255, 72, 72, 0.7);
     border: none;
     width: clamp(3.5rem, 8vw, 5rem);
-    height: clamp(1rem, 3.5vh, 2rem);
+    height: clamp(1rem, 4vh, 2rem);
     border-radius: 0.5rem;
     font-size: clamp(0.71rem, 1vw, 2rem); 
 }
@@ -78,9 +78,54 @@ hr{
     opacity: 0.5;
 }
 
+.total-items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8%;
+}
+
+.total-items h3{
+    font-size: clamp(0.8rem, 1.5vw, 2rem); 
+    font-weight: 400;
+}
+
+.total-items .total-price{
+    background: rgb(168, 167, 167);
+    color: black;
+    height: clamp(1rem, 3.3vh, 2rem);
+    width: clamp(3.5rem, 8vw, 5rem);
+    text-align: center;
+    padding: 1%;
+    border: 1px solid rgba(255, 72, 72, 0.7);
+    border-radius: 20%;
+    font-weight: bold;
+    font-size: clamp(0.8rem, 1.5vw, 2rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.checkout-btn{
+    height: clamp(1rem, 3.9vh, 2rem);
+    width: clamp(5.3rem, 10vw, 7rem);
+    margin-left: 40%;
+    background-color: hsla(46, 75%, 51%, 0.835);
+    border: none;
+    outline: none;
+    color: white;
+    text-shadow: 2px 2px 5px rgb(37, 37, 37);
+    font-weight: bold;
+    font-size: clamp(0.8rem, 1.2vw, 2rem);
+    border-bottom-left-radius:  35px;
+    border-top-right-radius: 35px;
+}
 
 @media only screen and (max-width: 768px){
     .customModal {
         width: 70%;
+    }
+
+    .checkout-btn{
+        margin-left: 30%;
     }
 }

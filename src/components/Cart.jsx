@@ -16,9 +16,7 @@ function Cart() {
   const onOpenModal = () => setOpen(true);
   const onCloseModal = () => setOpen(false);
 
-  const { totalItems } = useCart();
-
-  const { cart, removeFromCart } = useCart();
+  const { totalItems, cart, removeFromCart, totalPrice, checkout } = useCart();
   
 
   return (<>
@@ -38,7 +36,6 @@ function Cart() {
                 <p className='cartEmpty'>Your cart is empty</p>
             ) : (
                 cart.map((item, index) => (
-                    item && item.name && item.price && item.image ? (
                         <div className='cartProduct' key={index}>
                             <div className='cartProduct-sub'>
                               <img src={item.image} style={{width: 'clamp(30px, 5vw, 100px)',
@@ -48,14 +45,15 @@ function Cart() {
                             </div>
                             <hr />
                         </div>
-                    ) : (
-                        <div key={index}>
-                            <p>Invalid item in cart</p>
-                        </div>
-                    )
                 ))
             )}
         </div>
+
+        <div className='total-items'>
+          <h3>Total:</h3>
+          <div className='total-price'>${totalPrice.toFixed(2)}</div>
+        </div>
+        <button className='checkout-btn' onClick={checkout}>Checkout</button>
     </Modal>
   </>)
 }

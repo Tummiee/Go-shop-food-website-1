@@ -12,17 +12,31 @@ export const useCart = () => {
 export const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
     const [totalItems, setTotalItems] = useState(0);
+    const [totalPrice, setTotalPrice] = useState(0);
 
     const addToCart = (item) => {
 
         setCart([...cart, item]);
         setTotalItems(totalItems + 1); // Increment total items count
+        setTotalPrice(totalPrice + item.price);
     };
 
     const removeFromCart = (itemId) => {
-        const newCart = cart.filter(item => item.id !== itemId);
-        setCart(newCart);
-        setTotalItems(newCart.length); // Update total items count
+        const itemIndex = cart.findIndex(item => item.id === itemId);
+        if (itemIndex > -1) {
+            const newCart = [...cart];
+            const item = newCart[itemIndex];
+            newCart.splice(itemIndex, 1);
+            setCart(newCart);
+            setTotalItems(totalItems - 1);
+            setTotalPrice(totalPrice - item.price);
+        }
+    };
+
+    const checkout = () => {
+        setCart([]);
+        setTotalItems(0);
+        setTotalPrice(0);
     };
 
     const value = {
@@ -30,6 +44,9 @@ export const CartProvider = ({ children }) => {
         addToCart,
         removeFromCart,
         totalItems,
+        totalPrice,
+        checkout,
+
     };
 
     return (
