@@ -1,5 +1,4 @@
 .customModal {
-    /* Style for the modal container */
     background-color: black;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -120,11 +119,19 @@ hr{
     border-top-right-radius: 35px;
 }
 
+
+
 @media only screen and (max-width: 768px){
     .customModal {
         width: 70%;
     }
 
+    .checkout-btn{
+        margin-left: 35%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
     .checkout-btn{
         margin-left: 30%;
     }
