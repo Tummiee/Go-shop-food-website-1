@@ -40,12 +40,14 @@ const handleLogout = async () => {
                 <Link to="/about"> About </Link>
                 <Link to="/contact"> Contact </Link>
                 <button onClick={handleLogout} style={{ 
-                                                        
+                                                        position: 'relative',
                                                         marginLeft: '30%',
                                                         border: '0',
                                                         outline: '0',
                                                         color: 'red',
                                                         background: 'none',
+                                                        left: '15%'
+
                                                         
                 }}>Logout</button>
               </div>
